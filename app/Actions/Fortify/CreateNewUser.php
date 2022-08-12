@@ -40,6 +40,7 @@ class CreateNewUser implements CreatesNewUsers
             'country' => $input['country'],
             'city' => $input['city'],
             'role' => $input['role'],
+            'profile_photo_path' => 'https://via.placeholder.com/640x640.png/005588?text=people'.$input['name'],
             'password' => Hash::make($input['password']),
         ]);
     }

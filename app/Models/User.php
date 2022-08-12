@@ -32,6 +32,7 @@ class User extends Authenticatable
         'description',
         'city',
         'country',
+        'profile_photo_path'
     ];
 
     /**

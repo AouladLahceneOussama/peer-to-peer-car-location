@@ -9,16 +9,13 @@
 
                 <div class="owl-carousel owl-theme blogpost w-full lg:w-1/2  items-center">
                     <div class="w-full  lg:mx-12 h-64  lg:h-96">
-                        <img class="h-full w-full rounded-md object-cover max-w-lg " src="{{ $annonce->image1 }}"
-                            alt="{{ $annonce->title }}">
+                        <img class="h-full w-full rounded-md object-cover max-w-lg " src="{{ $annonce->image1 }}" alt="{{ $annonce->title }}">
                     </div>
-                  <div class="w-full  lg:mx-12 h-64  lg:h-96">
-                        <img class="h-full w-full rounded-md object-cover max-w-lg " src="{{ $annonce->image2 }}"
-                            alt="{{ $annonce->title }}">
+                    <div class="w-full  lg:mx-12 h-64  lg:h-96">
+                        <img class="h-full w-full rounded-md object-cover max-w-lg " src="{{ $annonce->image2 }}" alt="{{ $annonce->title }}">
                     </div>
-                  <div class="w-full  lg:mx-12 h-64  lg:h-96">
-                        <img class="h-full w-full rounded-md object-cover max-w-lg " src="{{ $annonce->image3 }}"
-                            alt="{{ $annonce->title }}">
+                    <div class="w-full  lg:mx-12 h-64  lg:h-96">
+                        <img class="h-full w-full rounded-md object-cover max-w-lg " src="{{ $annonce->image3 }}" alt="{{ $annonce->title }}">
                     </div>
                 </div>
 
@@ -125,34 +122,34 @@
 
                     <div class="owl-carousel owl-theme blogpost w-full lg:w-1/2">
                         @forelse ($comments as $comment)
-                            <div class="w-full h-full flex justify-center pl-4">
-                                <div class="flex flex-row my-20 relative">
-                                    <div class="max-w-md px-16 bg-red-500 shadow-lg rounded-l-lg"></div>
-                                    <div
-                                        class="flex justify-center z-10 md:justify-end absolute transform -translate-y-1/2 top-1/2 left-20">
-                                        <img class="rounded-full my-20 border-4 border-white"
-                                            style="width: 5rem !important; height:5rem !important;"
-                                            src="/storage/{{ $comment->user->profile_photo_path }}">
-                                    </div>
+                        <div class="w-full h-full flex justify-center pl-4">
+                            <div class="flex flex-row my-20 relative">
+                                <div class="max-w-md px-16 bg-red-500 shadow-lg rounded-l-lg"></div>
+                                <div class="flex justify-center z-10 md:justify-end absolute transform -translate-y-1/2 top-1/2 left-20">                                    
+                                    @if(str_contains($comment->user->profile_photo_path, 'https') == true)
+                                    <img src="{{ $comment->user->profile_photo_path }}" alt="{{ $comment->user->name }}" class="rounded-full my-20 border-4 border-white" style="width: 5rem !important; height:5rem !important;">
+                                    @else
+                                    <img src="/storage/{{ $comment->user->profile_photo_path }}" alt="{{ $comment->user->name }}" class="rounded-full my-20 border-4 border-white" style="width: 5rem !important; height:5rem !important;">
+                                    @endif
+                                </div>
 
-                                    <div
-                                        class="max-w-3xl p-10 px-14 bg-white shadow-lg rounded-r-lg flex items-center ">
+                                <div class="max-w-3xl p-10 px-14 bg-white shadow-lg rounded-r-lg flex items-center ">
+                                    <div>
                                         <div>
-                                            <div>
-                                                <a href="/profile/{{ $comment->user->id }}"
-                                                    class="text-gray-800 text-3xl font-semibold hover:text-gray-500 transition duration-300 ease-in-out">{{ $comment->user->name }}</a>
-                                                <h2 class="text-gray-500 text-sm font-semibold">
-                                                    {{ $comment->created_at->diffForHumans() }}</h2>
-                                                <p class="mt-2 text-gray-600">{{ $comment->comment }}</p>
-                                            </div>
+                                            <a href="/profile/{{ $comment->user->id }}" class="text-gray-800 text-3xl font-semibold hover:text-gray-500 transition duration-300 ease-in-out">{{ $comment->user->name }}</a>
+                                            <h2 class="text-gray-500 text-sm font-semibold">
+                                                {{ $comment->created_at->diffForHumans() }}
+                                            </h2>
+                                            <p class="mt-2 text-gray-600">{{ $comment->comment }}</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
                         @empty
-                            <div class="uppercase text-center text-red-500 text-xl">
-                                No comments
-                            </div>
+                        <div class="uppercase text-center text-red-500 text-xl">
+                            No comments
+                        </div>
                         @endforelse
 
                     </div>
@@ -171,8 +168,7 @@
                     <p class="w-full md:w-2/3 text-gray-400">To ensure that all our articles and promotions reach you
                         keep in touch with us. Dont forget to rate us.</p>
                     <div class="w-44 pt-6 md:pt-0">
-                        <a class="bg-red-500 justify-center text-center rounded-lg shadow px-10 py-3 flex items-center"
-                            href="#contact">Contact US</a>
+                        <a class="bg-red-500 justify-center text-center rounded-lg shadow px-10 py-3 flex items-center" href="#contact">Contact US</a>
                     </div>
                 </div>
                 <div class="flex flex-col">
@@ -180,12 +176,9 @@
                         <div class="">
                             <img src="/img/logoW.png" alt="white logo" class="w-12">
                         </div>
-                        <a class="hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase"
-                            href="#home">Home</a>
-                        <a class="hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase"
-                            href="#articles">Dashboard</a>
-                        <a class="hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase"
-                            href="#becomePartner">Articles</a>
+                        <a class="hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase" href="#home">Home</a>
+                        <a class="hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase" href="#articles">Dashboard</a>
+                        <a class="hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase" href="#becomePartner">Articles</a>
                         <div class="flex flex-row space-x-8 items-center justify-between">
                             <a>
                                 <i class="fab fa-facebook"></i>
@@ -215,5 +208,4 @@
             dots: true,
         });
     });
-
 </script>
