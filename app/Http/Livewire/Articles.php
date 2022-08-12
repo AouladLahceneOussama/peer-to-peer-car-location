@@ -14,8 +14,9 @@ class Articles extends Component
     public function mount()
     {
         $whereArray['annoncedispos.stat']  = 1;
-        $this->annonce = Annonce::orderBy('created_at', 'desc')
-        ->join('annoncedispos', 'annonces.id', '=', 'annoncedispos.annonce_id')
+        $this->annonce = Annonce::
+        // orderBy('created_at', 'desc')
+        join('annoncedispos', 'annonces.id', '=', 'annoncedispos.annonce_id')
         ->distinct('annonces.id')
         ->select('annonces.*')
         ->where($whereArray)
