@@ -1,0 +1,64 @@
+/*Overrides for Tailwind CSS */
+		
+		/*Form fields*/
+		.dataTables_wrapper select,
+		.dataTables_wrapper .dataTables_filter input {
+			color: #4a5568; 			/*text-gray-700*/
+			font-weight: bold;
+			padding-left: 1rem; 		/*pl-4*/
+			padding-right: 1rem; 		/*pl-4*/
+			padding-top: .5rem; 		/*pl-2*/
+			padding-bottom: .5rem; 		/*pl-2*/
+			line-height: 1.25; 			
+			border-width: 2px; 			
+			border-radius: 50px; 		
+			background-color:#f8f8f8; 	
+		}
+		.dataTables_filter input:focus {			 		
+			border-color: #ef4f4f;	
+		}
+		.dataTables_wrapper select:focus{
+			border-color: red;
+		}
+
+		
+		/*Pagination Buttons*/
+		.dataTables_wrapper .dataTables_paginate .paginate_button		{
+			font-weight: 700;				/*font-bold*/
+			border-radius: .25rem;			/*rounded*/
+			border: 1px solid transparent;	/*border border-transparent*/
+		}
+		
+		/*Pagination Buttons - Current selected */
+		.dataTables_wrapper .dataTables_paginate .paginate_button.current	{
+			color: #fff !important;				/*text-white*/
+			box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06); 	/*shadow*/
+			font-weight: 700;					/*font-bold*/
+			border-radius: .25rem;				/*rounded*/
+			background: #ef4f4f !important;		/*bg-indigo-500*/
+			border: 1px solid transparent;		/*border border-transparent*/
+		}
+
+		/*Pagination Buttons - Hover */
+		.dataTables_wrapper .dataTables_paginate .paginate_button:hover		{
+			color: #fff !important;				/*text-white*/
+			box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);	 /*shadow*/
+			font-weight: 700;					/*font-bold*/
+			border-radius: .25rem;				/*rounded*/
+			background: #ef4f4f !important;		/*bg-indigo-500*/
+			border: 1px solid transparent;		/*border border-transparent*/
+		}
+		
+		/*Add padding to bottom border */
+		
+		#example_info{
+			color: white;
+		}
+		#example_length{
+			color: white;
+		}
+		/*Change colour of responsive icon*/
+		table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child:before, table.dataTable.dtr-inline.collapsed>tbody>tr>th:first-child:before {
+			background-color: #ef4f4f !important; /*bg-indigo-500*/
+}
+		
