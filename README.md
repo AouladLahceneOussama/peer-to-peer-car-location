@@ -3,6 +3,7 @@ This application is made using Laravel 8.4 with jetstrem kit that come with live
 
 # Requirements
  php >= 7.4
+ 
  laravel = 8.4
  
 # Instruction to install the application
