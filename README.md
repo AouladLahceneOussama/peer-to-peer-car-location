@@ -1,4 +1,6 @@
-<img src="/public/img/logoW.png" class="center" width="200" height="400" />
+<p align="center">
+  <img src="/public/img/logoW.png" width="200" height="200" />
+</p>
 
 # peer-to-peer-car-location
 This application is made using Laravel 8.4 with jetstrem kit that come with livewire components. the idea of this project is to locate your car peer to peer, that means if you have a car and it stays free in somedays, you can publish it to be located in those specific days and times.
