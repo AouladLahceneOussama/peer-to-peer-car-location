@@ -2,9 +2,8 @@
 This application is made using Laravel 8.4 with jetstrem kit that come with livewire components. the idea of this project is to locate your car peer to peer, that means if you have a car and it stays free in somedays, you can publish it to be located in those specific days and times.
 
 # Requirements
- php >= 7.4
- 
- laravel = 8.4
+- php >= 7.4
+- Laravel = 8.4
  
 # Instruction to install the application
 ```
