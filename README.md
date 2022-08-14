@@ -29,6 +29,7 @@ MAIL_ENCRYPTION=tls
 php artisan serve
 ```
 > Register to the application with 2 account.
+> 
 > there is 2 rols : partner and user
 
 # Functionalities
