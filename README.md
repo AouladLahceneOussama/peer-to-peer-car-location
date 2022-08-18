@@ -35,8 +35,10 @@ MAIL_ENCRYPTION=tls
 # usage
 ```
 php artisan serve
+php artisan schedule:work
 ```
-> Register to the application with 2 account, one with the partner role and the other with the user role, to test all the functionalities
+> The second command to activate the CRON jobs that runs each day.
+> Register to the application with 2 account, one with the partner role and the other with the user role, to test all the functionalities.
 
 # Functionalities
 - Publish your location offers.
