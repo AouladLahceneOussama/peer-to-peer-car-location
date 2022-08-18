@@ -37,7 +37,7 @@ MAIL_ENCRYPTION=tls
 php artisan serve
 php artisan schedule:work
 ```
-> The second command to activate the CRON jobs that runs each day.
+> The second command to activate the CRON jobs that runs each day.  
 > Register to the application with 2 account, one with the partner role and the other with the user role, to test all the functionalities.
 
 # Functionalities
